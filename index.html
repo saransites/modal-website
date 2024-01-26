@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <header id="home">
+        <div class="logo">
+            Logo
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#About">About</a>
+                </li>
+                <li>
+                    <a href="#services">Service</a>
+                </li>
+                <li>
+                    <a href="#portfolio">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#contacts">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <img src="./images/menu-bar.png" alt="">
+        </div>            
+    
+   </header>
+   <ul id="sidebar">
+    <div class="xmark">
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <li>
+        <a href="#home">Home</a>
+    </li>
+    <li>
+        <a href="#About">About</a>
+    </li>
+    <li>
+        <a href="#services">Service</a>
+    </li>
+    <li>
+        <a href="#portfolio">Portfolio</a>
+    </li>
+    <li>
+        <a href="#contacts">Contact</a>
+    </li>
+    </ul>
+   <!-- Hero section -->
+   <section>
+    <div class="hero-container">
+          <div class="hero-content">
+            <p>Web Designer</p>
+            <h1>Hi I'm <span>Saran</span><br>From Tamilnadu</h1>
+          </div>
+    </div>
+   </section>
+   <!-- About Section -->
+   <section id="About">
+        <div class="container">
+            <div class="about-img">
+                <img src="./images/pexels-monoar-rahman-114907.jpg">
+            </div>
+            <div class="about-content">
+                <h1>About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quam eos dolores nihil rerum, </p>
+                <div class="tab-head">
+                    <p class="tablink activelink" onclick="openTab('skills')">Skills</p>
+                    <p class="tablink" onclick="openTab('Experience')">Experience</p>
+                    <p class="tablink" onclick="openTab('Education')">Education</p>
+                </div>
+                <div class="tabcontent activeContent" id="skills">
+                    <ul>
+                        <li>
+                            <span>UI/UX</span><br>Designing Web/App Interfaces
+                        </li>
+                        <li>
+                            <span>Web Development</span><br>Web App Development
+                        </li>
+                        <li>
+                            <span>App Development</span><br>Building Android/iOS apps
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabcontent" id="Experience">
+                    <ul>
+                        <li>
+                            <span>1 Year of</span><br>Working of Devoloping Web/App Interfaces
+                        </li>
+                        <li>
+                            <span>Web Development</span><br>Web App Development
+                        </li>
+                        <li>
+                            <span>App Development</span><br>Building Android/iOS apps
+                        </li>
+                    </ul>
+                </div>
+                <div class="tabcontent" id="Education">
+                    <ul>
+                        <li>
+                            <span>3 months Full-stack Web-Development course</span><br>Designing Web/App Interfaces
+                        </li>
+                        <li>
+                            <span>Web Development</span><br>Web App Development
+                        </li>
+                        <li>
+                            <span>App Development</span><br>Building Android/iOS apps
+                        </li>
+                    </ul>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+   </section>
+   <!--services Section -->
+   <section id="services">
+    <div class="container">
+        <h1>My Services</h1>
+        <div class="service-container">
+            <div class="service-box">
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. mpore </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-crop-alt"></i>
+                <h2>UI/UX Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. mpore </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="service-box">
+                <i class="fab fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. mpore </p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+   </section>
+    <!--portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h1>My Work</h1>
+            <div class="portfolio-container">
+                <div class="portfolio-box">
+                    <img src="./images/one.jpg" alt="Project 1"/>
+                    <div class="portfolio-box content">
+                        <h3>Social Media App</h3>
+                        <p>This app is connected to the talented people around the world.Download it in your playstore</p>
+                        <a href="#">
+                            <i class="fa-solid fa-share-from-square"></i>
+                        </a>                    
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="./images/two.jpg" alt="Project 1"/><div class="portfolio-box content">
+                        <h3>Music App</h3>
+                        <p>This app is connected to the talented people around the world.Download it in your playstore</p>
+                        <a href="#">
+                            <i class="fa-solid fa-share-from-square"></i>
+                        </a>                    
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="./images/three.jpg" alt="Project 1"/>
+                    <div class="portfolio-box content">
+                        <h3>Online shopping App</h3>
+                        <p>This app is connected to the talented people around the world.Download it in your playstore</p>
+                        <a href="#">
+                            <i class="fa-solid fa-share-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="btndiv">
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+    </section>
+    <!-- contact section -->
+    <section id="contacts">
+        <div class="contacts-container">
+            <div class="contact-left">
+                <h1>Contact Me</h1>
+                <div class="contact-left-box">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <a href="#">saransingh0110@gmail.com</a>
+                </div>
+                <div class="contact-left-box">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="#">0123456789</a>
+                </div>
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form action="">
+                    <div class="contact-input">
+                        <input type="text" required="required">
+                        <label>Name</label>
+                    </div>
+                    <div class="contact-input">
+                        <input type="tel" required="required">
+                        <label>Number</label>
+                    </div>
+                    <div class="contact-input">
+                        <input type="email" required="required">
+                        <label>Email</label>
+                    </div>
+                    <textarea></textarea>
+                    <div class="btndiv">
+                        <a href="#" class="btn one">see more</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- footer section -->
+    <div class="footer">
+        <p>copyright&copy;with<mark>Saran</mark>with❤️...</p>
+    </div>
+</body>
+</html>
