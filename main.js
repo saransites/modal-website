@@ -19,5 +19,5 @@ hamburger.addEventListener("click",()=>{
     sidebar.style.right="0"
 })
 xmark.addEventListener("click",()=>{
-    sidebar.style.right="-40%"
+    sidebar.style.right="-60%"
 })

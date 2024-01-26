@@ -5,11 +5,14 @@
     list-style: none;
     font-family: 'Poppins', sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 body {
     width:100%;
     height:100vh;
     padding:0 10px;
-    background: linear-gradient(#404172,#828282)center/cover fixed no-repeat;
+    background: linear-gradient(#40725e,#836593,#3a3535)center/cover fixed no-repeat;
 }
 header{
     width:100%;
@@ -17,22 +20,30 @@ header{
     display:flex;
     justify-content: space-between;
     align-items: center;
+    margin:10px 0;
     padding:10px;
     color:#fff;
     border-radius: 10px;
+    backdrop-filter: blur(50px);
+    transition: all .5s ease-in-out;
+}
+header:hover{
+    transform: scale(1.01);
+    filter:grayscale(100%);
 }
 #sidebar{
     position:fixed;
     top:0;
-    right:-40%;
+    right:-60%;
     z-index: 99;
     background:#404172;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width:40%;
+    width:60%;
     height:100%;
     transition:1s;
 }
@@ -42,7 +53,7 @@ header{
     padding:5px;
     border-radius: 5px;
     background: linear-gradient(rgba(148, 149, 147, 0),#636262);
-    transition: background-color 0.5s;
+    transition: background-color 0.5s ease-in-out;
 }
 #sidebar li:hover{
     background-color:#171616;
@@ -70,22 +81,23 @@ header nav ul li a:hover{
 .hero-container{
     position:relative;
     width:100%;
-    min-height:80vh;
+    height:80vh;
     background:url(./images/three.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     margin:10px 0;
     border-radius: 10px;
+    overflow: hidden;
 }
 .hero-container span{
     font-size: 4rem;
     color:#a60478;
 }
 .hero-content{
-    background:linear-gradient(#302f2f 50%,#ffffff);
+    background:linear-gradient(#7b7b7b,#04a63a);
     background-repeat: no-repeat;
-    position:absolute;
-    top:0;
+    position: absolute;
+    bottom: 0;
     right:0;
     width:100%;
     height:0;
@@ -99,20 +111,21 @@ header nav ul li a:hover{
 }
 .hero-content :is(p,h1){
     position:absolute;
-    left:20%;
+    right:0;
     bottom:5%;
+    transition: all 1s;
 }
 .hero-content p{
-    bottom:35%;
+    bottom:32%;
+    transition: all 1s;
 }
 /* ----------------About Section-------------- */
 #About .container{
     display:flex;
-    justify-content: center;
-    height:70vh;
-    clear: both;
+    justify-content: center;   
     overflow: hidden;
     gap:1rem;
+    padding:10px 0;
 }
 .about-img{
     flex-basis: 45%;
@@ -126,12 +139,19 @@ header nav ul li a:hover{
     flex-basis: 40%;
     font-size: 1rem;
 }
-.about-content p{
+.about-content>p{
     margin:5px 0;
+    color:#fff;
 }
 .tab-head{
     display:flex;
-    gap:10px;
+    gap:1.4rem;
+}
+.tab-head p{
+    transition: 0.5s ease-in-out;
+}
+.tab-head p:hover{
+    color:#ffffff;
 }
 .tablink{
     position:relative;
@@ -141,11 +161,12 @@ header nav ul li a:hover{
     content: '';
     position: absolute;
     width:0;
-    background-color:rgb(159, 4, 4);
+    background-color:rgb(133, 39, 39);
     height:3px;
     bottom:-6px;
     left:0;
     transition: width 0.5s;
+    border-radius: 45%;
 }
 .tablink:hover::after{
     width:60%;
@@ -157,8 +178,11 @@ header nav ul li a:hover{
     margin:5px 0;
     display:none;
 }
+.tabcontent ul>li{
+    color:#fff;
+}
 .tabcontent span{
-    color:rgb(83, 13, 13);
+    color:rgb(62, 170, 252);
 }
 .tabcontent.activeContent{
     display:block;
@@ -373,6 +397,9 @@ textarea{
     padding:5px 10px;
     cursor:pointer;
 }
+.hero-container img{
+    display:none;
+}
 /*small screens */
 @media screen and (max-width:600px){
     .hamburger{
@@ -388,25 +415,45 @@ textarea{
     header nav{
         display:none;
     }
-    .hero-container{
-        position:relative;
+    .hero-container img{
+        display:block;
         width:100%;
-        background:url(./images/three.jpg) no-repeat;
-        background-position: center;
-        background-size: cover;
     }
+    .hero-container{
+        background:none;
+        height:auto;
+    }
+    .hero-container .hero-content{
+        font-size: 10px;
+    }
+    .hero-content :is(p,h1){
+        position:absolute;
+        right:0;
+        bottom:5%;
+        transition: all 1s;
+        font-size: 10px;
+    }
+    .hero-content p{
+        bottom:30%;
+        transition: all 1s;
+    }
+    /* .hero-container{
+        position:relative;
+        max-width:100%;
+        width:900px;
+        min-height:40vh;
+        background:url(./images/three.jpg) no-repeat;
+        background-size: contain;
+    } */
     .hero-container span{
         font-size: 50px;
         color:#a60478;
-    }
-    #About .container{
-        height:30vh;
     }
     .about-img{
         flex-basis: 55%;
     }
     .about-content{
         flex-basis: 40%;
-        font-size: 10px;
+        font-size: 0.5rem;
     }
 }
