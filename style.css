@@ -88,13 +88,17 @@ header nav ul li a:hover{
     margin:10px 0;
     border-radius: 10px;
     overflow: hidden;
+
+}
+.hero-container:hover{
+    transform: scale(1.01);
 }
 .hero-container span{
     font-size: 4rem;
     color:#a60478;
 }
 .hero-content{
-    background:linear-gradient(#7b7b7b,#04a63a);
+    background:linear-gradient(#7b7b7b,#40725e);
     background-repeat: no-repeat;
     position: absolute;
     bottom: 0;
@@ -113,7 +117,6 @@ header nav ul li a:hover{
     position:absolute;
     right:0;
     bottom:5%;
-    transition: all 1s;
 }
 .hero-content p{
     bottom:32%;
@@ -437,14 +440,6 @@ textarea{
         bottom:30%;
         transition: all 1s;
     }
-    /* .hero-container{
-        position:relative;
-        max-width:100%;
-        width:900px;
-        min-height:40vh;
-        background:url(./images/three.jpg) no-repeat;
-        background-size: contain;
-    } */
     .hero-container span{
         font-size: 50px;
         color:#a60478;
